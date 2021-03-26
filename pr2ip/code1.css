@@ -1,0 +1,123 @@
+  nav{
+  margin-bottom: 25px;
+}
+#menu-checkbox {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.main-menu {
+
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  margin: 0;
+  padding-top: 5px;
+  background: #555;
+}
+.main-menu li {
+  display: block;
+  width: 100%;
+  text-align: center;
+
+}
+.main-menu a {
+  display: block;
+  border-bottom: 1px solid blueviolet;
+  padding: .5em;
+  color: #000 !important;
+  text-decoration: none
+}
+.main-menu a:hover {
+  text-decoration: underline;
+}
+.toggle-button {
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  float: left;
+padding-top: 5px;
+padding-left: 15px;
+}
+.toggle-button:after {
+  content: attr(data-open);
+  display: block;
+}
+#menu-checkbox:checked + nav[role="navigation"] .main-menu {
+  position: static;
+}
+#menu-checkbox:checked + nav[role="navigation"] .toggle-button:after {
+  content: attr(data-close);
+}
+
+@keyframes fade {
+  0%   { opacity: 0; }
+  11.11%   { opacity: 1; }
+  33.33%  { opacity: 1; }
+  44.44%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+img {
+  display: block;
+  max-width:230px;
+  max-height:305px;
+  width: auto;
+  height: auto;
+}
+.fadein {
+ position:relative;
+  width:70%;}
+
+.fadein img {
+ position:absolute;
+  width:100%;
+  margin-left: 650px;
+  margin-top: 100px; 
+left:0;
+  right:0;
+   opacity:0;
+    animation-name: fade;
+     animation-duration: 9s;
+      animation-iteration-count: infinite; }
+.fadein img:nth-child(1) { animation-delay: 0s;  }
+.fadein img:nth-child(2) { animation-delay: 3s;  }
+.fadein img:nth-child(3) { animation-delay: 6s;  }
+.fadein img:nth-child(4) { animation-delay: 9s;  }
+
+.square1 {
+  width: 300px;
+  height: 300px;
+  background: rgba(0, 0, 255, 1);
+  position: absolute;
+  top: 550px;
+  left: 300px;
+  animation: squne 2s infinite linear;
+}
+
+
+.square3 {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 0, 0, 1);
+  position: absolute;
+  top: 500px;
+  left: 450px;
+  animation: squne 2s infinite linear;
+}
+.square4 {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 155, 255, 1);
+  position: absolute;
+  top: 200px;
+  left:150px ;
+  animation: squne 2s infinite linear;
+}
+
+@keyframes squne {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
